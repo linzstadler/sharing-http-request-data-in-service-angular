@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {distinctUntilChanged, ReplaySubject, shareReplay, startWith, switchMap} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
-  private endpoint = 'http://nex.enenom.com/users';
+  private endpoint = `${environment.baseUrl}/users`;
   private readonly trigger$ = new ReplaySubject<string>(1);
   private headers = new HttpHeaders();
 
@@ -17,16 +18,11 @@ export class ServicesService {
 
   readonly data$ = this.trigger$.pipe(
       distinctUntilChanged(),
-      switchMap((code) => this.http.get<any>(`${this.endpoint}`, {'headers': this.headers}).pipe(
-          startWith(null)
-      )),
+      switchMap((code) => this.http.get<any>(`${this.endpoint}`, {'headers': this.headers})),
       shareReplay()
   );
 
 
-  // reload() {
-  //     this.trigger$.next();
-  // }
   public reload(code: string): void {
     this.trigger$.next(code);
   }
