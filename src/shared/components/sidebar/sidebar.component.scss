@@ -1,0 +1,16 @@
+@import "src/assets/colors";
+.sidebar {
+  background-color: $primary-500;
+  max-width: 100px;
+  a {
+    margin-bottom: 2rem;
+    img {
+      width: 50px;
+      box-shadow: 0 5px 10px rgba(black, 0.3);
+    }
+  }
+  a:last-child {
+    margin-bottom: 0;
+  }
+
+}

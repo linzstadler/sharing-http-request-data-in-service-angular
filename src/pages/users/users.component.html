@@ -1,0 +1,20 @@
+<div class="px-6 py-10">
+    <a href="javascript:;" class="back ml-10 mb-8 flex items-center" routerLink="/">
+        <span class="inline-block"><svg class="h-8 w-8 icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+                                        stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path
+                d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1"/></svg></span> <span class="-mt-1 ml-1">Back</span></a>
+    <ul *ngIf="data | async as data">
+        <li *ngFor="let item of data" class="userArea inline-block mx-4 rounded-lg px-4 py-8">
+            <div class="text-center">
+                <div class="avatarArea rounded-full overflow-hidden p-1 m-auto mb-4">
+                    <img [src]="imageUrl + item.avatar" class=" inline-block rounded-full"/>
+                </div>
+                <div>
+                    <p class="mb-1">{{item.first_name}} {{item.last_name}}</p>
+                    <p class="email">{{item.email}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

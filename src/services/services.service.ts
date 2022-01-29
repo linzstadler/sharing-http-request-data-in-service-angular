@@ -18,7 +18,7 @@ export class ServicesService {
 
   readonly data$ = this.trigger$.pipe(
       distinctUntilChanged(),
-      switchMap((code) => this.http.get<any>(`${this.endpoint}`, {'headers': this.headers})),
+      switchMap((code) => this.http.get<any>(`${this.endpoint}?page=1&size=5`, {'headers': this.headers})),
       shareReplay()
   );
 

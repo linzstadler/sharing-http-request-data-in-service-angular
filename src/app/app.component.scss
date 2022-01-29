@@ -1,0 +1,13 @@
+@import "src/assets/colors";
+.customGrid {
+  display: flex;
+  & > div:first-child {
+    width: 100%;
+  }
+  & > div:last-child {
+    width: 100px;
+  }
+}
+.layout {
+  background-color: $primary-50;
+}

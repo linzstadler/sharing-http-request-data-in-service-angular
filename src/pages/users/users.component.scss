@@ -1,0 +1,29 @@
+@import "src/assets/colors";
+.userArea {
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.03);
+  .avatarArea {
+    border: 2px solid $primary-500;
+    width: 70px;
+
+
+  }
+}
+.icon {
+  color: $primary-500;
+}
+.back {
+  span {
+    color: $primary-500;
+  }
+
+}
+ul {
+  li {
+    width: 315px;
+    .email {
+      color: $grey-300
+    }
+
+  }
+}
