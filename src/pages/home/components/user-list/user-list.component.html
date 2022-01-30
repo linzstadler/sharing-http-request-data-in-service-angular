@@ -1,0 +1,14 @@
+<div class="card userList m-auto p-5 rounded-lg overflow-auto">
+    <div *ngIf="data | async as data">
+        <div class = "flex flex-nowrap mb-4" *ngFor="let item of data">
+                <div class="grow-0 w-12 rounded-full overflow-hidden">
+                    <img [src] = "imageUrl + item.avatar" />
+                </div>
+                <div class="flex-auto w-64 text-left pl-4">
+                    {{item.first_name}} {{item.last_name}}
+                </div>
+              
+        </div>
+    </div>
+    
+</div>

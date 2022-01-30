@@ -5,7 +5,7 @@
                                         stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path
                 d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1"/></svg></span> <span class="-mt-1 ml-1">Back</span></a>
     <ul *ngIf="data | async as data">
-        <li *ngFor="let item of data" class="userArea inline-block mx-4 rounded-lg px-4 py-8">
+        <li *ngFor="let item of data" class="userArea card inline-block mx-4 rounded-lg px-4 py-8 mb-8">
             <div class="text-center">
                 <div class="avatarArea rounded-full overflow-hidden p-1 m-auto mb-4">
                     <img [src]="imageUrl + item.avatar" class=" inline-block rounded-full"/>

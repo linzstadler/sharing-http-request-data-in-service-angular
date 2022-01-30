@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users.component';
-import {usersRoutingModule} from "./users-routing.module";
+import {UsersRoutingModule} from "./users-routing.module";
 
 
 
@@ -11,7 +11,7 @@ import {usersRoutingModule} from "./users-routing.module";
   ],
   imports: [
     CommonModule,
-    usersRoutingModule
+    UsersRoutingModule
   ]
 })
 export class UsersModule { }
