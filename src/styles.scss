@@ -1,11 +1,23 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
+@import "./assets/colors";
 * {
   line-height: 1;
 }
 .card {
   background-color: white;
   box-shadow: 0 5px 10px rgba(0,0,0,0.03);
+}
+
+.btn-primary {
+  background-color: $primary-500;
+  color: white;
+  &:hover {
+    background-color: rgba($primary-500, .7);
+  }
+  &:disabled {
+    background-color: $grey-100;
+    cursor: not-allowed;
+  }
 }
