@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {ServicesService} from "../services/services.service";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import {ServicesService} from "../services/services.service";
 })
 export class AppComponent {
 
-  constructor(private dataService: ServicesService) {}
+  constructor() {}
 
 
   ngOnInit(): void {
@@ -16,7 +15,4 @@ export class AppComponent {
 
   }
 
-  reload() {
-    this.dataService.reload('asd');
-  }
 }
