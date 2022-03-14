@@ -16,7 +16,7 @@ export class ServicesService {
     private readonly trigger$ = new ReplaySubject<pagination>();
     private readonly headers = new HttpHeaders();
     constructor(private http: HttpClient) {
-        this.headers = this.headers.append('token', '02fd7e8b6a6b4c1ca4b603180160cf17');
+        this.headers = this.headers.append('token', '88387d932e65463186c567487250053d');
     }
 
     readonly data$ = this.trigger$.pipe(

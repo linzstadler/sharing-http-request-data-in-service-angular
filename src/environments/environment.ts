@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://nex.enenom.com/api',
-  imageUrl: 'http://nex.enenom.com/media/avatars/'
+  baseUrl: 'http://91.198.77.17:4009/api',
+  imageUrl: 'http://91.198.77.17:4009/media/avatars/'
 };
 
 /*
